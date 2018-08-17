@@ -1,0 +1,23 @@
+- prev = prev ? prev.toLowerCase() : 'about'
+- next = next ? next.toLowerCase() : 'projects'
+
+if prev == 'about'
+  - prevLink = '/about.html'
+  - prevText = 'about'
+else
+  - prevLink = `/${prev}.html`
+  - prevText = 'previous'
+
+if next == 'projects'
+  - nextLink = '/'
+  - nextText = 'projects'
+else
+  - nextLink = `/${next}.html`
+  - nextText = 'next'
+
+nav.side-nav
+  ul
+    li
+      a(href=`${prevLink}`) #{prevText}
+    li
+      a(href=`${nextLink}`) #{nextText}

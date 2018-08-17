@@ -1,0 +1,636 @@
+@import "config";
+@import "utils";
+@import "font";
+@import "bootstrap-partial";
+
+$size-small: 12px;
+$size-normal: 15px;
+$size-large: 18px;
+$size-jumbo: 28px;
+html,body,p,div,a{
+  font-family: $font-family;
+  color:$font-dark;
+}
+a{
+  text-decoration: none;
+  padding: 3px 0;
+}
+body,html{margin:0;padding:0;}
+body {
+position:relative;
+height:100%;
+width:100%;
+-moz-osx-font-smoothing:grayscale;
+-webkit-font-smoothing:antialiased;
+// overflow-x:hidden;
+}
+
+.font-bold{
+  font-family: 'Lato', serif;
+  font-weight: 900;
+}
+.font-light{
+  font-family: "Lato", "Roboto", serif;
+  font-weight: 300;
+}
+
+p{
+  margin-bottom: 5px !important;
+}
+
+.bg-transparent{
+  background:transparent;
+}
+.bold{
+  font-weight: bold;
+  color:$font-dark !important;
+}
+.light{
+  @extend .font-light;
+  font-size:$size-normal;
+  line-height: 24px;
+}
+// .nav-link{
+//   padding-left: 10px;
+//   padding-right: 10px;
+// }
+/*==============================
+=            Header            =
+==============================*/
+.header{
+  padding-top: 30px;
+
+  // NOT USED
+  .nav-wrapper{
+    margin: 0;
+    li{
+      list-style: none;
+      display:inline-block;
+      a{
+        padding:8px 0;
+      }
+    }
+    li+li{
+      margin-left: 20px;
+    }
+  }
+}
+
+.fixed-top-nav{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+}
+/*=====  End of Header  ======*/
+
+
+
+/*======================================
+=            Link Animation            =
+======================================*/
+// Colors
+$colors: (
+  'green': $live-green,
+  'purple': $live-purple,
+  'blue': $live-cyan,
+);
+
+
+.animated-link {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  text-shadow:
+    0 0 map_get($colors, 'black'),
+    .08em 0 0 #fff,
+    0 0,
+    -.08em 0 0 #fff;
+  vertical-align: bottom;
+
+  &:hover, &.active{
+    text-decoration: none;
+  }
+  &:hover:after , &.active:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height:2px;
+    width: 400%;
+    z-index: -1;
+    text-decoration: none;
+    animation: underline-gradient 6s linear infinite;
+    background-image: linear-gradient(
+      90deg,
+      rgba( map_get($colors, 'purple'), 0.8) 15%,
+      rgba( map_get($colors, 'green'), 0.6) 35%,
+      rgba( map_get($colors, 'blue'), 0.6) 60%,
+      rgba( map_get($colors, 'purple'), 0.8) 85%
+    );
+  }
+}
+
+@keyframes underline-gradient {
+  0%{
+    transform: translate3d(0%, 0%, 0);
+  }
+  100%{
+    transform: translate3d(-75%, 0%, 0);
+  }
+}
+
+
+/*=====  End of Link Animation  ======*/
+
+
+
+/*=========================================
+=            Center by Flexbox            =
+=========================================*/
+
+.aligner{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aligner-item {
+  max-width: 90%;
+}
+.aligner-item-top {
+  align-self: flex-start;
+}
+.aligner-item-bottom {
+  align-self: flex-end;
+}
+
+/*=====  End of Center by Flexbox  ======*/
+
+
+/*===============================
+=            Overlay            =
+===============================*/
+
+.overlay{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#f5f5f5;
+  opacity: 1;
+  z-index:1000;
+}
+.overlay.fadeout{
+  animation: fadeout 2s;
+  opacity:0;
+  z-index:-1;
+}
+
+@keyframes fadeout{
+  from {opacity:1;}
+  to {opacity:0;}
+}
+
+.overlay-menu{
+  @extend .overlay;
+  width:0;
+  transition: 0.6s;
+}
+/*=====  End of Overlay  ======*/
+
+/*=========================================
+=            Detail Link Arrow            =
+=========================================*/
+
+@keyframes move-out{
+  from {right:20px; opacity:0;}
+  to {right:0px; opacity:1;}
+}
+.detail-link{
+  margin-top: 30px;
+  padding-right: 30px;
+  position: relative;
+  @extend .animated-link;
+
+  &::before{
+    position: absolute;
+    content: '→';
+    top:0px;
+    opacity:0;
+  }
+
+  &:hover, &.active{
+    color: lighten($font-dark, 20%);
+    &::before{
+      animation: move-out 0.6s ease-out forwards;
+    }
+    // color: $link-hover;
+    // cursor: hand;
+    // text-decoration: none;
+  }
+}
+
+
+
+/*=====  End of Detail Link Arrow  ======*/
+
+
+/*==============================
+=            Footer            =
+==============================*/
+.footer{
+  border-top: 1px solid #efefef;
+  padding: 5px;
+  background: #4a4a4a;
+  *{
+    color:#c7c7c7;
+  }
+  .title{
+    @extend .font-bold;
+  }
+  ul.links{
+    margin-left: 0;
+    padding: 0;
+    width:100%;
+
+    li{
+      display: inline-block;
+      list-style-type: none;
+      a{
+        i.icon{
+          font-size:20px;
+        }
+        &:hover{
+          i.icon{
+            color: white;
+          }
+        }
+      }
+    }
+    li+li{
+      margin-left: 30px;
+    }
+  }
+  .foot-note{
+    width:300px;
+    text-align: right;
+    font-size: $size-small;
+    padding-top:15px;
+  }
+}
+
+.space-between{
+  display:flex;
+  justify-content: space-between;
+}
+
+
+.icon-heart{
+  color:#FB565E;
+}
+@media (max-width: 768px) {
+  .footer{
+    .space-between{
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 15px;
+    }
+    ul.links{
+      width:auto;
+      margin:0 auto;
+      li{
+        i.icon{
+          font-size:18px;
+        }
+      }
+    }
+  }
+
+}
+
+/*=====  End of Footer  ======*/
+
+
+
+/*================================
+=            Parallax            =
+================================*/
+
+.fullscreen-bg{
+  /* Force the background image to fill the whole element. */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  /* Keep the image from overlapping sibling elements. */
+  width:100%;
+  height:100%;
+}
+@media screen and (min-width: 768px) {
+  .fullscreen-bg{
+    background-attachment: fixed;
+  }
+}
+
+// @each $name in $project-list {
+//   .project-#{$name}-img {
+//     @extend .fullscreen-bg;
+//     background-image: url(/dist/image/#{$name}/main-#{$name}.jpg);
+//   }
+//   @media screen and (min-width: 768px){
+//     .project-#{$name}-img{
+//       background-attachment: fixed;
+//     }
+//   }
+// }
+.project-test-img{
+  @extend .fullscreen-bg;
+  background-image: url('/dist/image/bg1.jpg');
+}
+
+// Detail
+.detail-img{
+  padding:20px 0;
+  width:100%;
+  height:auto;
+}
+.detail-img-wrapper{
+  overflow: hidden;
+  width:100%;
+}
+
+// Thumbnail
+//
+.thumbnail{
+  width:100%;
+  .img-outer{
+    overflow: hidden;
+    width:100%;
+    transition:transform .3s;
+    &:hover{
+      transform:scale(0.97);
+    }
+    img{
+      width:100%;
+      height: auto;
+      transition: transform 1s;
+      &:hover{
+        transform:scale(1.13);
+      }
+    }
+
+  }
+  .title, .body{
+    text-align: center;
+    font-size:$size-normal;
+  }
+  .title{
+    font-weight: bold;
+    padding-top: 30px;
+    @extend .font-bold;
+  }
+  .body{
+    margin-top: 2px;
+    padding-bottom: 80px;
+    @extend .font-light;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+}
+/*=====  End of Parallax  ======*/
+
+/*========================================
+=            Scroll Animation            =
+========================================*/
+
+.scroll {
+  width: 100px;
+  height: 65px;
+  background-color: none;
+  z-index: 5;
+  position: fixed;
+  bottom: 0;
+  right: calc(50% - 50px);
+  animation: bounce 1.6s ease infinite;
+
+  h5 {
+    @extend .font-light;
+    text-align:center;
+    text-decoration:none;
+    font-size:$size-normal;
+  }
+
+  &:before {
+    position:absolute;
+    font-family: "xinzhang-jessy";
+    content: "\6b";
+    right:42%;
+    z-index:4;
+    top:45px;
+  }
+}
+
+.scroll.white {
+  color:white;
+  h5{
+    color:white;
+  }
+  &:before{
+    color:white;
+  }
+}
+
+@keyframes bounce {
+  from { bottom:70px }
+  60% { bottom:-0 }
+  to { bottom:70px }
+}
+/*=====  End of Scroll Animation  ======*/
+
+
+
+
+/*===================================
+=            Detail Text            =
+===================================*/
+.detail-text{
+  padding: 15px 35px;
+  margin: 30px;
+  .project-name{
+    font-weight: 900;
+    font-size:$size-jumbo;
+    margin-bottom: 15px;
+  }
+  .title, .body{
+    font-size:$size-normal;
+    line-height: 20px;
+  }
+  .title{
+    @extend .font-bold;
+  }
+  .body{
+    @extend .font-light;
+    margin-top: 0;
+  }
+}
+/*=====  End of Detail Text  ======*/
+
+/*========================================
+=            Circle Animation            =
+========================================*/
+$white:          #FFFFFF;
+$black:          #000000;
+$whitesmoke:     #F5F5F5;
+$link-blue:      #2175FF;
+
+.centered-container {
+  background-color: $white;
+  display: inline-flex;
+  padding: 4rem;
+  border-radius: .125rem;
+  border: 1px solid rgba($black, .1);
+  box-shadow: 0 .125rem .25rem rgba($black, .04);
+}
+
+.link {
+  color: $link-blue;
+  cursor: pointer;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.link--arrowed {
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+
+  .arrow-icon {
+    position: relative;
+    top: -1px;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    vertical-align: middle;
+  }
+
+  .arrow-icon--circle {
+    transition: stroke-dashoffset .3s ease;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 95;
+  }
+
+  &:hover {
+    .arrow-icon {
+      transform: translateX(5px);
+    }
+
+    .arrow-icon--circle {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
+
+/*=====  End of Circle Animation  ======*/
+
+.side-nav{
+  position: fixed;
+  top:44%;
+  right:-90px;
+  transform: rotate(270deg);
+  z-index:999;
+  ul{
+    width:250px;
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+      padding-bottom: 8px;
+      border-bottom:1px solid transparent;
+      a{
+        font-size:14px;
+        &:hover{
+          cursor:pointer;
+        }
+      }
+      &:hover{
+        border-bottom:1px solid $font-dark;
+      }
+    }
+    li+li{
+      margin-left: 40px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .side-nav{
+    top:300px;
+    right:-100px;
+    ul{
+      li{
+        padding-bottom: 2px;
+      }
+    }
+  }
+}
+
+/*=======================================
+=            Video Container            =
+=======================================*/
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+  margin-left: 20px;
+}
+.embed-container iframe, .embed-container object, .embed-container embed {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ }
+
+
+/*=====  End of Video Container  ======*/
+
+.separator{
+  text-align: center;
+  position: relative;
+  width:100%;
+  margin-top: 150px;
+  margin-bottom: 60px;
+  font-size:18px;
+  @extend .font-bold;
+}
+.separator:before, .separator:after{
+  content: '';
+  position: absolute;
+  height:0;
+  width:calc(50% - 280px);
+  border-bottom:1px solid #c7c7c7;
+}
+
+.separator:before{
+  top:10px;
+  left:0;
+}
+
+.separator:after{
+  top:10px;
+  right:0;
+}

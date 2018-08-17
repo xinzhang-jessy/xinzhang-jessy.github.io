@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "xinzhang-jessy";
+  src:url("/dist/fonts/xinzhang-jessy.eot");
+  src:url("/dist/fonts/xinzhang-jessy.eot?#iefix") format("embedded-opentype"),
+    url("/dist/fonts/xinzhang-jessy.woff") format("woff"),
+    url("/dist/fonts/xinzhang-jessy.ttf") format("truetype"),
+    url("/dist/fonts/xinzhang-jessy.svg#xinzhang-jessy") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "xinzhang-jessy" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "xinzhang-jessy" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angle-down:before {
+  content: "\61";
+}
+.icon-heart:before {
+  content: "\48";
+}
+.icon-heart-o:before {
+  content: "\68";
+}
+.icon-facebook-square:before {
+  content: "\62";
+}
+.icon-facebook-official:before {
+  content: "\63";
+}
+.icon-facebook:before {
+  content: "\64";
+}
+.icon-behance-square:before {
+  content: "\65";
+}
+.icon-behance:before {
+  content: "\66";
+}
+.icon-instagram:before {
+  content: "\67";
+}
+.icon-linkedin-square:before {
+  content: "\69";
+}
+.icon-linkedin:before {
+  content: "\6a";
+}
+.icon-down-open-big:before {
+  content: "\6b";
+}
