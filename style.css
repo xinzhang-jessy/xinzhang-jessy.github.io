@@ -16,27 +16,32 @@ body, html {
     left: 0;
     top: 0;
     overflow-y: auto;
-    background: #c23030; /* Dark tone for the sidebar */
+    background: #000000; /* Dark tone for the sidebar */
     color: #fff;
     padding: 20px 15px;
     box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+    
 }
 
 .brand-name {
     font-size: 24px;
-    color: #ade8f4; /* Light blue color for the brand name */
+    color: #ffffff; /* Light blue color for the brand name */
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
+    margin-left: 20px;
 }
 
 .menu {
     list-style: none;
     padding: 0;
     margin: 0;
+   
 }
 
 .menu-item {
     margin-bottom: 10px; /* Space between menu items */
+   
 }
 
 .menu-item > a {
@@ -44,15 +49,16 @@ body, html {
     text-decoration: none;
     display: block;
     padding: 10px 20px;
-    border-radius: 8px; /* Rounded corners for menu items */
-    background: #222; /* Slightly darker background for menu items */
+    /*border-radius: 14px; /* Rounded corners for menu items */
+   /* background: #222; /* Slightly darker background for menu items */
     transition: background 0.3s, color 0.3s;
+    text-align: left;
 }
 
 .menu-item > a:hover,
 .menu-item > a:focus {
-    background: #444; /* Lighter shade for hover */
-    color: #ade8f4; /* Light blue for text on hover */
+    /* background: #444; /* Lighter shade for hover */
+    color: #18F3BE; /* Light blue for text on hover */
 }
 
 .submenu {
@@ -71,7 +77,7 @@ body, html {
     padding: 5px 15px;
     display: block;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 14px;
 }
 
 .submenu li a:hover {
@@ -82,7 +88,7 @@ body, html {
     position: absolute;
     bottom: 10px;
     width: 90%;
-    text-align: center;
+    text-align: left;
     font-size: 12px;
     color: #ccc;
 }
@@ -108,22 +114,29 @@ img {
     width: calc(100% - 250px);
     padding: 20px;
     box-sizing: border-box;
-    background-color: #000000; /* Set your desired background color */
+    background-color: #0F0E0E; /* Set your desired background color */
     background-attachment: fixed; /* This makes the background not scroll */
     min-height: 100vh; /* Ensures the background covers the full viewport height */
     overflow-y: auto; /* Allows content to scroll if it exceeds the viewport height */
 }
 
-/* Add this new style for the main content title */
+/* Updated styles for the main content title */
 .main-content h1 {
     color: white;
     margin-top: 0; /* Keeps the title aligned properly */
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 80px;
+    margin-left: 5%; /* Align with the waterfall gallery */
+    padding-left: 15px; /* Match the padding of waterfall-item */
+    color: #18F3BE;
 }
 
 /* Adjust your existing waterfall-gallery styles */
 .waterfall-gallery {
-    column-count: 4; /* Changed from 3 to 4 */
-    column-gap: 15px;
+    column-count: 3; /* Changed from 3 to 4 */
+    column-gap: 40px;
     padding: 15px;
     width: 90%;
     margin: 0 auto;
@@ -131,7 +144,7 @@ img {
 
 .waterfall-item {
     break-inside: avoid;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -142,7 +155,7 @@ img {
 }
 
 .waterfall-item img {
-    width: 100%;
+    width: 90%;
     height: auto;
     display: block;
 }
@@ -150,13 +163,12 @@ img {
 .waterfall-item .description {
     display: block;
     margin-top: 10px;
-    text-align: center;
-    color: white;
-    font-size: 14px;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.7);
-    background-color: red !important;
-    border: 2px solid yellow !important;
+    text-align: left;
+    color: rgb(151, 150, 150);
+    font-size: 12px;
+    /*padding: 2px;*/
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 200;
 }
 
 .waterfall-item figure:hover img,
