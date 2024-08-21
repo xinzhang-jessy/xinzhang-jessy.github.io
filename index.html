@@ -6,6 +6,7 @@
     <title>Jessy.Z Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -45,63 +46,105 @@
                 <h1>Major Work</h1>
             </div>
             <main class="waterfall-gallery">
-                <div class="waterfall-item">
-                    <figure>
-                        <img src="tbn_major work/tbn_ss.png" alt="seagull studio">
-                        <figcaption class="work-title">Seagull Studio</figcaption>
-                    </figure>
-                    <p class="description">Mobile Application Design<br>Branding<br>Product Photography</p>
+                <div class="waterfall-item" data-project="seagull-studio">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_major work/tbn_ss.png" alt="seagull studio">
+                            <figcaption class="work-title">Seagull Studio</figcaption>
+                        </figure>
+                        <p class="description">Mobile Application Design<br>Branding<br>Product Photography</p>
+                    </a>
                 </div>
-                <div class="waterfall-item">
-                    <figure>
-                        <img src="tbn_major work/tbn_uhn.png" alt="uhn">
-                        <figcaption class="work-title">UHN Project</figcaption>
-                    </figure>
-                    <p class="description">Responsible Web Design<br>Visual Design</p>
+                <div class="waterfall-item" data-project="uhn-project">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_major work/tbn_uhn.png" alt="uhn">
+                            <figcaption class="work-title">UHN Project</figcaption>
+                        </figure>
+                        <p class="description">Responsible Web Design<br>Visual Design</p>
+                    </a>
                 </div>
-                <div class="waterfall-item">
-                    <figure>
-                        <img src="tbn_major work/tbn_wv.png" alt="wv">
-                        <figcaption class="work-title">WV Project</figcaption>
-                    </figure>
-                    <p class="description">AR & Voice Interface Design<br>Accessible Design</p>
+                <div class="waterfall-item" data-project="wv-project">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_major work/tbn_wv.png" alt="wv">
+                            <figcaption class="work-title">WV Project</figcaption>
+                        </figure>
+                        <p class="description">AR & Voice Interface Design<br>Accessible Design</p>
+                    </a>
                 </div>
-                <div class="waterfall-item">
-                    <figure>
-                        <img src="tbn_major work/tbn_mcd.png" alt="mcd">
-                        <figcaption class="work-title">MCD Project</figcaption>
-                    </figure>
-                    <p class="description">Web Graphic Design</p>
+                <div class="waterfall-item" data-project="mcd-project">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_major work/tbn_mcd.png" alt="mcd">
+                            <figcaption class="work-title">MCD Project</figcaption>
+                        </figure>
+                        <p class="description">Web Graphic Design</p>
+                    </a>
                 </div>
-                <div class="waterfall-item">
-                    <figure>
-                        <img src="tbn_major work/tbn_ms.png" alt="more studio">
-                        <figcaption class="work-title">More Studio</figcaption>
-                    </figure>
-                    <p class="description">Responsible Web Design<br>Visual Design</p>
+                <div class="waterfall-item" data-project="more-studio">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_major work/tbn_ms.png" alt="more studio">
+                            <figcaption class="work-title">More Studio</figcaption>
+                        </figure>
+                        <p class="description">Responsible Web Design<br>Visual Design</p>
+                    </a>
                 </div>
-                <div class="waterfall-item">
-                    <figure>
-                        <img src="tbn_major work/tbn_kc.png" alt="kin care">
-                        <figcaption class="work-title">Kin Care</figcaption>
-                    </figure>
-                    <p class="description">Mobile Application Design<br>Accessible Design<br>Health Monitor Design </p>
+                <div class="waterfall-item" data-project="kin-care">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_major work/tbn_kc.png" alt="kin care">
+                            <figcaption class="work-title">Kin Care</figcaption>
+                        </figure>
+                        <p class="description">Mobile Application Design<br>Accessible Design<br>Health Monitor Design </p>
+                    </a>
                 </div>
-                <div class="waterfall-item">
-                    <figure>
-                        <img src="tbn_major work/tbn_tt.png" alt="table tennis">
-                        <figcaption class="work-title">Table Tennis</figcaption>
-                    </figure>
-                    <p class="description">System Information Design<br>Web & Mobile System Interface</p>
+                <div class="waterfall-item" data-project="table-tennis">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_major work/tbn_tt.png" alt="table tennis">
+                            <figcaption class="work-title">Table Tennis</figcaption>
+                        </figure>
+                        <p class="description">System Information Design<br>Web & Mobile System Interface</p>
+                    </a>
                 </div>
-                <div class="waterfall-item">
-                    <figure>
-                        <img src="tbn_major work/tbn_l.png" alt="lotes">
-                        <figcaption class="work-title">Lotes</figcaption>
-                    </figure>
-                    <p class="description">AR Entertainment<br>AR Mobile Application Design</p>
+                <div class="waterfall-item" data-project="lotes">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_major work/tbn_l.png" alt="lotes">
+                            <figcaption class="work-title">Lotes</figcaption>
+                        </figure>
+                        <p class="description">AR Entertainment<br>AR Mobile Application Design</p>
+                    </a>
                 </div>
             </main>
+        </div>
+    </div>
+
+    <div id="popup-overlay" class="hidden">
+        <div id="popup-content">
+            <button id="close-popup" aria-label="Close popup">&times;</button>
+            <div id="popup-text">
+                <h2 id="popup-title"></h2>
+                <section>
+                    <h3>ABSTRACT</h3>
+                    <p id="popup-abstract"></p>
+                </section>
+                <section>
+                    <h3>TOOLKIT</h3>
+                    <ul id="popup-toolkit"></ul>
+                </section>
+                <section>
+                    <h3>ROLE</h3>
+                    <p id="popup-role"></p>
+                </section>
+                <section>
+                    <h3>KEYWORDS</h3>
+                    <ul id="popup-keywords"></ul>
+                </section>
+            </div>
+            <div id="popup-images" class="waterfall-gallery"></div>
         </div>
     </div>
 </body>
