@@ -81,6 +81,51 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
 
+///Featured Work
+
+        "cyber-box": {
+            title: "Cyber Box",
+            abstract: "Cyber Box is an interactive experience that unfolds through three engaging actions, linking a tangible interface with a digital screen in a sequential, narrative manner. Initially, users interact with dialog boxes that appear on-screen when stickers are placed in designated areas, simulating social media interactions like commenting or labeling. The second phase allows users to adjust sound levels, representing conversations. This adjustment is visually echoed by dynamic sound waves on the screen, symbolizing the overwhelming nature of overlapping dialogues. Lastly, users can press a 'button' to gradually inflate a virtual balloon on the screen, which ultimately bursts, signifying the climax of this interactive journey.",
+            toolkit: ["Arduino", "Figma","Photoshop"],
+            role: "Designer & Developer",
+            keywords: ["Interaction Design", "Web Interface Design"],
+            images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+        },
+        "pressure-pad": {
+            title: "Pressure Pad",
+            abstract: "The objective of this project is to create a pressure sensor using non-conductive materials to detect pressure and generate analog data. This concept is inspired by the 'Polymerization of pyrrole' method, which involves forming conductive polymers within and around textile fibers. Prior to building the prototype, I conducted comparative experiments and found that a sponge is effective for pressure sensing. The sponge is treated with a water-soluble graphite conductive solution, filling its pores with graphite particles to make it conductive. This treatment allows the sponge to function like Velostat, enabling it to output analog data when deformed. Additionally, conductive copper tape is applied to a non-conductive leather material. Finally, these elements are assembled in a layered 'sandwich' configuration to create the textile pressure sensor.",
+            toolkit: ["Water-soluble conductive graphite pigment", "Non-conductive leather cloth", "Non-conductive sponge", "Bubble Wrap", "Double sided tape", "Arduino Nano 33 IOT", "Coper tapes"],
+            role: "Designer & Developer",
+            keywords: ["Textile Pressure Sensor", "Wearable Installation"],
+            images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+        },
+        "shoulder-feeling": {
+            title: "Shoulder Feeling",
+            abstract: "This prototype aims to make an intangible sense we experience from our surroundings tangible and measurable through two interfaces: a wearable vest and a digital mobile app. The vest, embedded with pressure sensors on the shoulders and an Arduino board on the back, detects the pressure exerted by carrying a bag. This pressure data is then communicated to the mobile app, enabling users to be aware of the invisible stress on their shoulders. The pressure levels are categorized into five stages: 'easy', 'comfortable', 'ok', 'hard', and 'can't hold', each triggered by corresponding sensor readings. This setup highlights how our bodies, rich in biological sensors, often don't fully convey sensory information to our brains. By externalizing this feedback through wearable technology, we can gain a clearer understanding and awareness of these otherwise unnoticed bodily sensations.",
+            toolkit: ["Pressure Sensor", "Sensible Fabric ", "Arduino", "Arduino", "Photoshop"],
+            role: "Designer & Developer",
+            keywords: ["Interaction Design", "Wearable Design"],
+            images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+        },
+
+        "ewuw": {
+            title: "Eat What You Want",
+            abstract:"'Eat What You Want' is an immersive multi-media art installation. Created against a backdrop of a stimulating narrative, this project leverages both web technology and Augmented Reality for its visual elements, enriched with sound and audio effects to narrate the story and deliver a comprehensive multi-media experience. As a collaborative team effort, I spearheaded the concept and worked closely with my team to craft the overarching storyline, design the interaction flow, and bring the visual aspects to life.",
+            toolkit: ["Cargo", "Adobe Aero ","Photoshop"],
+            role: "Designer",
+            keywords: ["Interaction Design", "Wearable Design"],
+            images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+        },
+
+        "eepo": {
+            title: "Eepo",
+            abstract: "Eepo is a smart home system that allows users to control their home appliances through voice commands. It's part of thesis work and involved a dedicated six-month effort to develop a functional prototype. The development process was comprehensive, beginning with brainstorming and extensive literature reviews. It further encompassed in-depth research and interviews with target users, culminating in the meticulous design and development of the application.",
+            toolkit: ["Unity", "Figma","P5.js"],
+            role: "Designer & Developer & Researcher",
+            keywords: ["XR Interaction Design","Child-centered Design","Voice Interaction Design"],
+            images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+        },
+
         // ... Add data for other projects ...
     };
 

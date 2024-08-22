@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessy.Z Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="brand-name">JESSY.Z</h1>
+            <nav>
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="#" aria-haspopup="true">WORK GALLERY</a>
+                        <ul class="submenu">
+                            <li><a href="#">Major Work</a></li>
+                            <li><a href="#">Featured Work</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" aria-haspopup="true">LOVING THING</a>
+                        <ul class="submenu">
+                            <li><a href="#">Photography</a></li>
+                            <li><a href="#">Design</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" aria-haspopup="true">About Me</a>
+                        <ul class="submenu">
+                            <li><a href="#">Biography</a></li>
+                            <li><a href="#">Resume</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <footer class="footer">
+                <p>&copy; 2024 Jessy Zhang.<br>Handcrafted with ❤.</p>
+            </footer>
+        </div>
+    <div class="main-content">
+            <div class="h1">
+                <h1>Featured Work</h1>
+            </div>
+            <main class="waterfall-gallery">
+                <div class="waterfall-item" data-project="shoulder-feeling">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_featured work/tbn_sf.png" alt="shoulder-feeling">
+                            <figcaption class="work-title">Shoulder Feeling</figcaption>
+                        </figure>
+                        <p class="description">Wearable Device Design<br>Human-centered Interaction</p>
+                    </a>
+                </div>
+                <div class="waterfall-item" data-project="eepo">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_featured work/tbn_eepo.png" alt="eepo">
+                            <figcaption class="work-title">EEPO</figcaption>
+                        </figure>
+                        <p class="description">XR Interaction Design<br>Child-centered Design<br>Voice Interaction Design</p>
+                    </a>
+                </div>
+                <div class="waterfall-item" data-project="ewuw">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_featured work/tbn_ewuw.png" alt="ewuw">
+                            <figcaption class="work-title">Eat What You Want</figcaption>
+                        </figure>
+                        <p class="description">Trans-media Storytelling<br>Mobile AR Application Design<br>Web Interaction Design</p>
+                    </a>
+                </div>
+                <div class="waterfall-item" data-project="cyber-box">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_featured work/tbn_cb.png" alt="cyber box">
+                            <figcaption class="work-title">Cyber Box</figcaption>
+                        </figure>
+                        <p class="description">Interface Design<br>Web Interaction Design</p>
+                    </a>
+                </div>
+                <div class="waterfall-item" data-project="pressure-pad">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_featured work/tbn_pp.png" alt="pressure pad">
+                            <figcaption class="work-title">Pressure Pad</figcaption>
+                        </figure>
+                        <p class="description">Textile Pressure Sensor<br>Wearable Interaction Design<br>Human-centered Interaction</p>
+                    </a>
+                </div>
+                
+            </main>
+        </div>
+    </div>
+
+    <div id="popup-overlay" class="hidden">
+        <div id="popup-content">
+            <button id="close-popup" aria-label="Close popup">&times;</button>
+            <div id="popup-text">
+                <h2 id="popup-title"></h2>
+                <section>
+                    <h3>ABSTRACT</h3>
+                    <p id="popup-abstract"></p>
+                </section>
+                <section>
+                    <h3>TOOLKIT</h3>
+                    <ul id="popup-toolkit"></ul>
+                </section>
+                <section>
+                    <h3>ROLE</h3>
+                    <p id="popup-role"></p>
+                </section>
+                <section>
+                    <h3>KEYWORDS</h3>
+                    <ul id="popup-keywords"></ul>
+                </section>
+            </div>
+            <div id="popup-images" class="waterfall-gallery"></div>
+        </div>
+    </div>
+</body>
+</html>
