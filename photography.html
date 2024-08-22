@@ -46,7 +46,7 @@
                 <h1>Photography</h1>
             </div>
             <main class="waterfall-gallery">
-                <div class="waterfall-item" data-project="oihk">
+                <div class="waterfall-item photography-item" data-project="oasis-in-hongkong">
                     <a href="#" class="project-link">
                         <figure>
                             <img src="tbn_photography/tbn_oihk.jpg" alt="oihk">
@@ -55,7 +55,7 @@
                         <p class="description">Landscape Photography<br>Digital Photography</p>
                     </a>
                 </div>
-                <div class="waterfall-item" data-project="cherry-blossom">
+                <div class="waterfall-item photography-item" data-project="cherry-blossom">
                     <a href="#" class="project-link">
                         <figure>
                             <img src="tbn_photography/tbn_cb.jpg" alt="cherry-blossom">
@@ -64,7 +64,7 @@
                         <p class="description">Landscape<br>Film Photography</p>
                     </a>
                 </div>
-                <div class="waterfall-item" data-project="early-autumn">
+                <div class="waterfall-item photography-item" data-project="early-autumn">
                     <a href="#" class="project-link">
                         <figure>
                             <img src="tbn_photography/tbn_ea.png" alt="early-autumn">
@@ -73,7 +73,7 @@
                         <p class="description">Landscape<br>Digital Photography</p>
                     </a>
                 </div>
-                <div class="waterfall-item" data-project="landscape-of-iceland">
+                <div class="waterfall-item photography-item" data-project="landscape-of-iceland">
                     <a href="#" class="project-link">
                         <figure>
                             <img src="tbn_photography/tbn_loi.jpg" alt="landscape-of-iceland">
@@ -82,7 +82,7 @@
                         <p class="description">Landscape<br>Film Photography</p>
                     </a>
                 </div>
-                <div class="waterfall-item" data-project="radiant-darkness">
+                <div class="waterfall-item photography-item" data-project="radiant-darkness">
                     <a href="#" class="project-link">
                         <figure>
                             <img src="tbn_photography/tbn_dr.jpg" alt="radiant-darkness">
@@ -103,22 +103,20 @@
                 <h2 id="popup-title"></h2>
                 <section>
                     <h3>ABSTRACT</h3>
-                    <p id="popup-abstract"></p>
-                </section>
-                <section>
-                    <h3>TOOLKIT</h3>
-                    <ul id="popup-toolkit"></ul>
-                </section>
-                <section>
-                    <h3>ROLE</h3>
-                    <p id="popup-role"></p>
+                    <p id="popup-intro"></p>
                 </section>
                 <section>
                     <h3>KEYWORDS</h3>
                     <ul id="popup-keywords"></ul>
                 </section>
             </div>
-            <div id="popup-images" class="waterfall-gallery"></div>
+            <div id="popup-slideshow">
+                <div id="slideshow-container">
+                    <!-- Slides will be dynamically added here -->
+                </div>
+                <button id="prev-slide" aria-label="Previous slide">&#10094;</button>
+                <button id="next-slide" aria-label="Next slide">&#10095;</button>
+            </div>
         </div>
     </div>
 </body>

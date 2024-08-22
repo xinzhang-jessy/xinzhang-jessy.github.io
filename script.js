@@ -82,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 ///Featured Work
-
         "cyber-box": {
             title: "Cyber Box",
             abstract: "Cyber Box is an interactive experience that unfolds through three engaging actions, linking a tangible interface with a digital screen in a sequential, narrative manner. Initially, users interact with dialog boxes that appear on-screen when stickers are placed in designated areas, simulating social media interactions like commenting or labeling. The second phase allows users to adjust sound levels, representing conversations. This adjustment is visually echoed by dynamic sound waves on the screen, symbolizing the overwhelming nature of overlapping dialogues. Lastly, users can press a 'button' to gradually inflate a virtual balloon on the screen, which ultimately bursts, signifying the climax of this interactive journey.",
@@ -126,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
             images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
         },
     /// maker project 
-
         "green-splash": {
         title: "Green Splash",
         abstract: "",
@@ -162,19 +160,82 @@ document.addEventListener('DOMContentLoaded', () => {
                 keywords: ["Interactive Graphic","Visual Art"],
                 images: ["body band/bb_dets1.png", "body band/bb_dets2.png", "body band/bb_dets3.png", "body band/bb_dets4.png","body band/bb_dets5.png","body band/bb_dets6.png","body band/1.gif","body band/2.gif","body band/3.gif","body band/4.gif","body band/5.gif"]
              },
+        
+    //Photography 
+
+        "oasis-in-hongkong": {
+            title: "Oasis in Hong Kong",
+            intro: "To many, Hong Kong epitomizes a modern metropolis, known for its dazzling neon lights, bustling streets, and perpetual motion. Yet, to me, Hong Kong reveals a more authentic, ecological side that showcases the vivid colors and textures of changing seasons",
+            keywords: ["Landscape","Digital Photography"],
+            images: ["oasis in hongkong/oihk_dets1.jpg", "oasis in hongkong/oihk_dets2.jpg", "oasis in hongkong/oihk_dets3.jpg", "oasis in hongkong/oihk_dets4.jpg", "oasis in hongkong/oihk_dets5.jpg","oasis in hongkong/oihk_dets6.jpg","oasis in hongkong/oihk_dets7","oasis in hongkong/oihk_dets8"]
+        },
+        
+        "cherry-blossom": {
+            title: "Cherry Blossom",
+            intro: "",
+            keywords: ["Landscape","Film Photography"],
+            images: ["cherry blossom/cb_dets1.jpg", "cherry blossom/cb_dets2.jpg", "cherry blossom/cb_dets3.jpg", "cherry blossom/cb_dets4.jpg", "cherry blossom/cb_dets5.jpg"]
+        },
+
+        "early-autumn": {
+            title: "Early Autumn",
+            intro: "To many, Hong Kong epitomizes a modern metropolis, known for its dazzling neon lights, bustling streets, and perpetual motion. Yet, to me, Hong Kong reveals a more authentic, ecological side that showcases the vivid colors and textures of changing seasons",
+            keywords: ["Landscape","Digital Photography"],
+            images: ["early autumn/1.jpg", "early autumn/2.jpg", "early autumn/3.jpg", "early autumn/4.jpg", "early autumn/5.jpg"]
+        },
+
+
+        "landscape-of-iceland": {   
+            title: "Landscape of Iceland",
+            intro: "This photo series captures the striking contrast between the intense cold and the powerful light of an Icelandic winter. Despite landscapes blanketed in snow, there's an undeniable strength in the light that shines during sunset, infusing the scenes with a dynamic energy.",
+            keywords: ["Landscape","Digital Photography"],
+            images: ["landscape of iceland/loi_dets1.jpg", "landscape of iceland/loi_dets2.jpg", "landscape of iceland/loi_dets3.jpg", "landscape of iceland/loi_dets4.jpg", "landscape of iceland/loi_dets5.jpg","landscape of iceland/loi_dets6.jpg","landscape of iceland/loi_dets7.jpg","landscape of iceland/loi_dets8.jpg"]
+        },
+
+        "radiant-darkness": {
+            title: "Radiant Darkness",
+            intro: "This photo series captures the striking contrast between the intense cold and the powerful light of an Icelandic winter. Despite landscapes blanketed in snow, there's an undeniable strength in the light that shines during sunset, infusing the scenes with a dynamic energy.",
+            keywords: ["Urbanization","Digital Photography"],
+            images: ["radiant darkness/rd_dets1.jpg", "radiant darkness/rd_dets2.jpg", "radiant darkness/rd_dets3.jpg", "radiant darkness/rd_dets4.jpg", "radiant darkness/rd_dets5.jpg", "radiant darkness/rd_dets6.jpg", "radiant darkness/rd_dets7.jpg"]
+        },
+
 
         // ... Add data for other projects ...
     };
 
-    // Event listener for project clicks
-    waterfallItems.forEach(item => {
+    // Check if we're on the photography page
+    const isPhotographyPage = document.querySelector('.photography-item') !== null;
+
+    if (isPhotographyPage) {
+        // Apply the photography-specific event listeners
+        const photographyItems = document.querySelectorAll('.photography-item');
+        photographyItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const projectId = item.dataset.project;
+                const project = projectData[projectId];
+                
+                if (project) {
+                    populatePhotographyPopup(project);
+                    popupOverlay.classList.remove('hidden');
+                    
+                    // Reset scroll position of popup content
+                    document.getElementById('popup-content').scrollTop = 0;
+                }
+            });
+        });
+    }
+
+    // Regular project click handler (will apply to all pages)
+    const regularItems = document.querySelectorAll('.waterfall-item:not(.photography-item)');
+    regularItems.forEach(item => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
             const projectId = item.dataset.project;
             const project = projectData[projectId];
             
             if (project) {
-                populatePopup(project);
+                populateRegularPopup(project);
                 popupOverlay.classList.remove('hidden');
                 
                 // Reset scroll position of popup content
@@ -183,8 +244,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Function to populate the popup with project data
-    function populatePopup(project) {
+    // Function to populate the popup for regular projects
+    function populateRegularPopup(project) {
         const popupContent = document.getElementById('popup-content');
         popupContent.innerHTML = `
             <div class="popup-header">
@@ -210,11 +271,57 @@ document.addEventListener('DOMContentLoaded', () => {
                 `).join('')}
             </div>
         `;
-        
-        // Ensure scroll reset after content is populated
-        setTimeout(() => {
-            popupContent.scrollTop = 0;
-        }, 0);
+    }
+
+    // Function to populate the popup for photography projects
+    function populatePhotographyPopup(project) {
+        const popupContent = document.getElementById('popup-content');
+        popupContent.innerHTML = `
+            <div class="popup-header">
+                <h2 id="popup-title">${project.title}</h2>
+                <p id="popup-intro">${project.intro}</p>
+                <h3>Keywords:</h3>
+                <ul id="popup-keywords">${project.keywords.map(keyword => `<li>${keyword}</li>`).join('')}</ul>
+            </div>
+            <div id="popup-slideshow">
+                <div id="slideshow-container">
+                    <!-- Slides will be dynamically added here -->
+                </div>
+                <button id="prev-slide" aria-label="Previous slide">&#10094;</button>
+                <button id="next-slide" aria-label="Next slide">&#10095;</button>
+            </div>
+        `;
+
+        // Set up slideshow
+        let currentSlide = 0;
+        let slides = project.images || [];
+
+        function showSlides() {
+            const slideshowContainer = document.getElementById('slideshow-container');
+            slideshowContainer.innerHTML = '';
+            slides.forEach((slide, index) => {
+                const img = document.createElement('img');
+                img.src = slide;
+                img.classList.add('slide');
+                img.style.display = index === currentSlide ? 'block' : 'none';
+                slideshowContainer.appendChild(img);
+            });
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            } else if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            }
+            showSlides();
+        }
+
+        document.getElementById('prev-slide').addEventListener('click', () => changeSlide(-1));
+        document.getElementById('next-slide').addEventListener('click', () => changeSlide(1));
+
+        showSlides();
     }
 
     closePopup.addEventListener('click', () => {
