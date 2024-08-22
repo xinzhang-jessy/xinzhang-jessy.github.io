@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessy.Z Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="brand-name">JESSY.Z</h1>
+            <nav>
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="#" aria-haspopup="true">WORK GALLERY</a>
+                        <ul class="submenu">
+                            <li><a href="#">Major Work</a></li>
+                            <li><a href="#">Featured Work</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" aria-haspopup="true">LOVING THING</a>
+                        <ul class="submenu">
+                            <li><a href="#">Photography</a></li>
+                            <li><a href="#">Design</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" aria-haspopup="true">About Me</a>
+                        <ul class="submenu">
+                            <li><a href="#">Biography</a></li>
+                            <li><a href="#">Resume</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <footer class="footer">
+                <p>&copy; 2024 Jessy Zhang.<br>Handcrafted with ❤.</p>
+            </footer>
+        </div>
+    <div class="main-content">
+            <div class="h1">
+                <h1>Photography</h1>
+            </div>
+            <main class="waterfall-gallery">
+                <div class="waterfall-item" data-project="oihk">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_photography/tbn_oihk.jpg" alt="oihk">
+                            <figcaption class="work-title">Oasis in Hong Kong</figcaption>
+                        </figure>
+                        <p class="description">Landscape Photography<br>Digital Photography</p>
+                    </a>
+                </div>
+                <div class="waterfall-item" data-project="cherry-blossom">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_photography/tbn_cb.jpg" alt="cherry-blossom">
+                            <figcaption class="work-title">Cherry Blossom</figcaption>
+                        </figure>
+                        <p class="description">Landscape<br>Film Photography</p>
+                    </a>
+                </div>
+                <div class="waterfall-item" data-project="early-autumn">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_photography/tbn_ea.png" alt="early-autumn">
+                            <figcaption class="work-title">Early Autumn</figcaption>
+                        </figure>
+                        <p class="description">Landscape<br>Digital Photography</p>
+                    </a>
+                </div>
+                <div class="waterfall-item" data-project="landscape-of-iceland">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_photography/tbn_loi.jpg" alt="landscape-of-iceland">
+                            <figcaption class="work-title">Landscape of Iceland</figcaption>
+                        </figure>
+                        <p class="description">Landscape<br>Film Photography</p>
+                    </a>
+                </div>
+                <div class="waterfall-item" data-project="radiant-darkness">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_photography/tbn_dr.jpg" alt="radiant-darkness">
+                            <figcaption class="work-title">Radiant Darkness</figcaption>
+                        </figure>
+                        <p class="description">Urbanization<br>Digital Photography</p>
+                    </a>
+                </div>
+                
+            </main>
+        </div>
+    </div>
+
+    <div id="popup-overlay" class="hidden">
+        <div id="popup-content">
+            <button id="close-popup" aria-label="Close popup">&times;</button>
+            <div id="popup-text">
+                <h2 id="popup-title"></h2>
+                <section>
+                    <h3>ABSTRACT</h3>
+                    <p id="popup-abstract"></p>
+                </section>
+                <section>
+                    <h3>TOOLKIT</h3>
+                    <ul id="popup-toolkit"></ul>
+                </section>
+                <section>
+                    <h3>ROLE</h3>
+                    <p id="popup-role"></p>
+                </section>
+                <section>
+                    <h3>KEYWORDS</h3>
+                    <ul id="popup-keywords"></ul>
+                </section>
+            </div>
+            <div id="popup-images" class="waterfall-gallery"></div>
+        </div>
+    </div>
+</body>
+</html>

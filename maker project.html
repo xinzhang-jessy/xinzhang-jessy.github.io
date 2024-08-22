@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessy.Z Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="brand-name">JESSY.Z</h1>
+            <nav>
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="#" aria-haspopup="true">WORK GALLERY</a>
+                        <ul class="submenu">
+                            <li><a href="#">Major Work</a></li>
+                            <li><a href="#">Featured Work</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" aria-haspopup="true">LOVING THING</a>
+                        <ul class="submenu">
+                            <li><a href="#">Photography</a></li>
+                            <li><a href="#">Design</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" aria-haspopup="true">About Me</a>
+                        <ul class="submenu">
+                            <li><a href="#">Biography</a></li>
+                            <li><a href="#">Resume</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <footer class="footer">
+                <p>&copy; 2024 Jessy Zhang.<br>Handcrafted with ❤.</p>
+            </footer>
+        </div>
+    <div class="main-content">
+            <div class="h1">
+                <h1>Maker Project</h1>
+            </div>
+            <main class="waterfall-gallery">
+                <div class="waterfall-item" data-project="green-splash">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_maker project/tbn_gs.png" alt="green-splash">
+                            <figcaption class="work-title">Green Splash</figcaption>
+                        </figure>
+                        <p class="description">Landscape Photography<br>Digital Photography</p>
+                    </a>
+                </div>
+                <div class="waterfall-item" data-project="body-gesture">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_maker project/tbn_bg.png" alt="body-gesture">
+                            <figcaption class="work-title">Body Gesture</figcaption>
+                        </figure>
+                        <p class="description">Interactive Graphics Design</p>
+                    </a>
+                </div>
+                <div class="waterfall-item" data-project="light-measurement">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_maker project/tbn_lm.png" alt="light-measurement">
+                            <figcaption class="work-title">Light Measurement</figcaption>
+                        </figure>
+                        <p class="description">Interactive Installation<br>Led Matrix</p>
+                    </a>
+                </div>
+                <div class="waterfall-item" data-project="body-band">
+                    <a href="#" class="project-link">
+                        <figure>
+                            <img src="tbn_maker project/tbn_bb.png" alt="body-band">
+                            <figcaption class="work-title">Body Band</figcaption>
+                        </figure>
+                        <p class="description">Interactive Graphics<br>Visual Art</p>
+                    </a>
+                </div>
+                
+            </main>
+        </div>
+    </div>
+
+    <div id="popup-overlay" class="hidden">
+        <div id="popup-content">
+            <button id="close-popup" aria-label="Close popup">&times;</button>
+            <div id="popup-text">
+                <h2 id="popup-title"></h2>
+                <section>
+                    <h3>ABSTRACT</h3>
+                    <p id="popup-abstract"></p>
+                </section>
+                <section>
+                    <h3>TOOLKIT</h3>
+                    <ul id="popup-toolkit"></ul>
+                </section>
+                <section>
+                    <h3>ROLE</h3>
+                    <p id="popup-role"></p>
+                </section>
+                <section>
+                    <h3>KEYWORDS</h3>
+                    <ul id="popup-keywords"></ul>
+                </section>
+            </div>
+            <div id="popup-images" class="waterfall-gallery"></div>
+        </div>
+    </div>
+</body>
+</html>

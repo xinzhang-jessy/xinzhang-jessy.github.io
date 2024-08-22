@@ -125,6 +125,43 @@ document.addEventListener('DOMContentLoaded', () => {
             keywords: ["XR Interaction Design","Child-centered Design","Voice Interaction Design"],
             images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
         },
+    /// maker project 
+
+        "green-splash": {
+        title: "Green Splash",
+        abstract: "",
+        toolkit: ["",""],
+        role: "Designer & Developer",
+        keywords: ["Phone Controller","Remote Interaction"],
+        images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+        },
+
+        "light-measurement": {
+            title: "Light Measurement Cup",
+            abstract: "Light Measurement Cup is an interactive installation designed to measure light intensity in various environments. It comprises two main components: an LED Matrix display and internal light sensors housed within a transparent cup. The sensors detect light and send analog signals to an Arduino, which then translates this data into visual patterns on the LED matrix.",
+            toolkit: ["Arduino","Glass Cup"],
+            role: "Designer & Developer",
+            keywords: ["Interactive Installation","Led Matrix"],
+            images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+            },
+
+        "body-gesture": {
+                title: "Body Gesture",
+                abstract: "This project consists of a series of innovative wearable prototypes that integrate sensitive elements with the human body. These elements are designed to respond to specific body movements by triggering visible signals. The primary aim of this work is to draw attention to and emphasize the importance of physical states and body language, creating a unique interaction between wearers and their movements.",
+                toolkit: ["Arduino","Conductive Material","Cooper","Leds"],
+                role: "Designer & Developer",
+                keywords: ["Interaction Design","Interactive Installation"],
+                images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+             },
+
+        "body-band": {
+                title: "Body Band",
+                abstract: "Body Band is an interactive experiment where the body acts as a sound controller, linking movement to screen-based audio. Participants trigger sounds by walking, raising hands, twisting, or squatting, starting from a natural stance in front of a screen. The project pairs everyday motions, usually silent, with musical sounds, exploring the relationship between physical movement and sound in five unique studies.",
+                toolkit: ["Figma","P5.js"],
+                role: "Designer & Developer",
+                keywords: ["Interactive Graphic","Visual Art"],
+                images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+             },
 
         // ... Add data for other projects ...
     };
