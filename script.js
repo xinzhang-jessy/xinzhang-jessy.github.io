@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["Sketch", "Photoshop", "Adobe Illustrator","Lightroom"],
             role: "Lead Designer UI/UX Designer Photographer",
             keywords: ["Mobile Application Deisng", "Branding", "Product Photography"],
-            images: ["path/to/seagull-studio-image1.jpg", "path/to/seagull-studio-image2.jpg"]
+            images: ["seagull studio/ss_dets1.png", "seagull studio/ss_dets2.png", "seagull studio/ss_dets3.png", "seagull studio/ss_dets4.png","seagull studio/ss_dets5.png","seagull studio/ss_dets6.png","seagull studio/ss_dets7.png","seagull studio/ss_dets8.png","seagull studio/ss_dets9.png","seagull studio/ss_dets10.png","seagull studio/ss_dets11.png"]
         },
         "uhn-project": {
             title: "UHN Project",
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["iOS ARKit", "Figma"],
             role: "Researcher UI/UX Designer Developer",
             keywords: ["AR & Voice Interface Design", "Accessibility Design"],
-            images: ["path/to/wv-image1.jpg", "path/to/wv-image2.jpg"]
+            images: ["wonder vision/wv_dets1.png", "wonder vision/wv_dets2.png", "wonder vision/wv_dets3.png", "wonder vision/wv_dets4.png", "wonder vision/wv_dets5.png","wonder vision/wv_dets6.png", "wonder vision/wv_dets7.png"]
         },
         "lotes": {
             title: "LOTES",
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["Adobe XD", "Figma"],
             role: "UX/UI Designer",
             keywords: ["AR Entertainment", "AR Mobile Application Design"],
-            images: ["path/to/lotes-image1.jpg", "path/to/lotes-image2.jpg"]
+            images: ["lotes/lotes_dets1.png", "lotes/lotes_dets2.png", "lotes/lotes_dets3.png", "lotes/lotes_dets4.png"]
         },
         
         "kin-care": {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["Flinto", "Figma"],
             role: "UX/UI Designer",
             keywords: ["Application Design", "Information Architecture"],
-            images: ["path/to/kincare-image1.jpg", "path/to/kincare-image2.jpg"]
+            images: ["kin care/kc_dets1.png", "kin care/kc_dets2.png", "kin care/kc_dets3.png", "kin care/kc_dets4.png", "kin care/kc_dets5.png"]
         },
         "mcd-project": {
             title: "Weather Iconic for MCD Website of China",
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["Sketch", "Adobe XD"],
             role: "Visual Designer",
             keywords: ["Visual Elements Design", "Graphic Design"],
-            images: ["path/to/mcd-image1.jpg", "path/to/mcd-image2.jpg"]
+            images: ["mcd/mcd_dets1.png", "mcd/mcd_dets2.png", "mcd/mcd_dets3.png", "mcd/mcd_dets4.png", "mcd/mcd_dets5.png"]
         },
         "more-studio": {
             title: "More Studio",
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["Sketch", "Photoshop"],
             role: "Visual Designer",
             keywords: ["Web Wireframe Design"],
-            images: ["path/to/morestudio-image1.jpg", "path/to/morestudio-image2.jpg"]
+            images: ["more studio/more_dets1.png", "more studio/more_dets2.png", "more studio/more_dets3.png", "more studio/more_dets4.png", "more studio/more_dets5.png", "more studio/more_dets6.png"]
         },
         "table-tennis": {
             title: "Table Tennis Registration System",
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["Arduino", "Figma","Photoshop"],
             role: "Designer & Developer",
             keywords: ["Interaction Design", "Web Interface Design"],
-            images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+            images: ["cyber box/cb_dets1.jpg", "cyber box/cb_dets2.png", "cyber box/cb_dets3.png"]
         },
         "pressure-pad": {
             title: "Pressure Pad",
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["Water-soluble conductive graphite pigment", "Non-conductive leather cloth", "Non-conductive sponge", "Bubble Wrap", "Double sided tape", "Arduino Nano 33 IOT", "Coper tapes"],
             role: "Designer & Developer",
             keywords: ["Textile Pressure Sensor", "Wearable Installation"],
-            images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+            images: ["pressure pad/pp_dets1.png", "pressure pad/pp_dets2.png", "pressure pad/pp_dets3.png", "pressure pad/pp_dets4.png"]
         },
         "shoulder-feeling": {
             title: "Shoulder Feeling",
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["Pressure Sensor", "Sensible Fabric ", "Arduino", "Arduino", "Photoshop"],
             role: "Designer & Developer",
             keywords: ["Interaction Design", "Wearable Design"],
-            images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+            images: ["shoulder's feeling/sf_dets1.png", "shoulder's feeling/sf_dets2.png", "shoulder's feeling/sf_dets3.png", "shoulder's feeling/sf_dets4.png", "shoulder's feeling/sf_dets5.png"]
         },
 
         "ewuw": {
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["Cargo", "Adobe Aero ","Photoshop"],
             role: "Designer",
             keywords: ["Interaction Design", "Wearable Design"],
-            images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+            images: ["ewuw/ewuw_dets1.png", "ewuw/ewuw_dets2.png", "ewuw/ewuw_dets3.png", "ewuw/ewuw_dets4.png"]
         },
 
         "eepo": {
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         toolkit: ["",""],
         role: "Designer & Developer",
         keywords: ["Phone Controller","Remote Interaction"],
-        images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+        images: ["green splash/gs_dets1.png", "green splash/gs_dets2.png", "green splash/gs_dets3.png"]
         },
 
         "light-measurement": {
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["Arduino","Glass Cup"],
             role: "Designer & Developer",
             keywords: ["Interactive Installation","Led Matrix"],
-            images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+            images: ["light measurement/lm_dets1.png", "light measurement/lm_dets2.png", "light measurement/lm_dets3.gif","light measurement/lm_dets4.gif"]
             },
 
         "body-gesture": {
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 toolkit: ["Arduino","Conductive Material","Cooper","Leds"],
                 role: "Designer & Developer",
                 keywords: ["Interaction Design","Interactive Installation"],
-                images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+                images: ["body gesture/bg_dets1.png", "body gesture/bg_dets2.png", "body gesture/bg_dets3.png", "body gesture/bg_dets4.png", "body gesture/bg_dets5.png"]
              },
 
         "body-band": {
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 toolkit: ["Figma","P5.js"],
                 role: "Designer & Developer",
                 keywords: ["Interactive Graphic","Visual Art"],
-                images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+                images: ["body band/bb_dets1.png", "body band/bb_dets2.png", "body band/bb_dets3.png", "body band/bb_dets4.png","body band/bb_dets5.png","body band/bb_dets6.png","body band/1.gif","body band/2.gif","body band/3.gif","body band/4.gif","body band/5.gif"]
              },
 
         // ... Add data for other projects ...
@@ -176,20 +176,45 @@ document.addEventListener('DOMContentLoaded', () => {
             if (project) {
                 populatePopup(project);
                 popupOverlay.classList.remove('hidden');
+                
+                // Reset scroll position of popup content
+                document.getElementById('popup-content').scrollTop = 0;
             }
         });
     });
 
     // Function to populate the popup with project data
     function populatePopup(project) {
-        document.getElementById('popup-title').textContent = project.title;
-        document.getElementById('popup-abstract').textContent = project.abstract;
-        document.getElementById('popup-toolkit').innerHTML = project.toolkit.map(tool => `<li>${tool}</li>`).join('');
-        document.getElementById('popup-role').textContent = project.role;
-        document.getElementById('popup-keywords').innerHTML = project.keywords.map(keyword => `<li>${keyword}</li>`).join('');
+        const popupContent = document.getElementById('popup-content');
+        popupContent.innerHTML = `
+            <div class="popup-header">
+                <div class="popup-main-image">
+                    <img src="${project.images[0]}" alt="${project.title}">
+                </div>
+                <div class="popup-info">
+                    <h2 id="popup-title">${project.title}</h2>
+                    <p id="popup-abstract">${project.abstract}</p>
+                    <h3>Toolkit:</h3>
+                    <ul id="popup-toolkit">${project.toolkit.map(tool => `<li>${tool}</li>`).join('')}</ul>
+                    <h3>Role:</h3>
+                    <p id="popup-role">${project.role}</p>
+                    <h3>Keywords:</h3>
+                    <ul id="popup-keywords">${project.keywords.map(keyword => `<li>${keyword}</li>`).join('')}</ul>
+                </div>
+            </div>
+            <div id="popup-images">
+                ${project.images.slice(1).map(image => `
+                    <div class="popup-image-container">
+                        <img src="${image}" alt="${project.title}">
+                    </div>
+                `).join('')}
+            </div>
+        `;
         
-        const popupImages = document.getElementById('popup-images');
-        popupImages.innerHTML = project.images.map(image => `<img src="${image}" alt="${project.title}">`).join('');
+        // Ensure scroll reset after content is populated
+        setTimeout(() => {
+            popupContent.scrollTop = 0;
+        }, 0);
     }
 
     closePopup.addEventListener('click', () => {

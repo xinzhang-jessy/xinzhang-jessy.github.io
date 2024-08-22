@@ -90,8 +90,8 @@ body, html {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto;
-    border-radius: 10px;
+    margin: 10px;
+    border-radius: 0px;
 }
 
 .main-content {
@@ -99,7 +99,7 @@ body, html {
     width: calc(100% - 250px);
     padding: 20px;
     box-sizing: border-box;
-    background-color: #0F0E0E;
+    background-color: #7e7bb0;
     background-attachment: fixed;
     min-height: 100vh;
     overflow-y: auto;
@@ -176,6 +176,7 @@ body, html {
 .waterfall-item .description {
     display: block;
     margin-top: 10px;
+    margin-left: 10px;
     text-align: left;
     color: rgb(151, 150, 150);
     font-size: 12px;
@@ -214,7 +215,7 @@ body, html {
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Change this line from 'center' to 'flex-start' */
     z-index: 1000;
 }
 
@@ -227,24 +228,41 @@ body, html {
     max-height: 90vh;
     overflow-y: auto;
     font-family: 'IBM Plex Mono', monospace;
-}
-
-#close-popup {
-    float: right;
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-}
-
-#popup-text {
-    margin-bottom: 30px;
+    position: relative;
+    margin-top: 5vh; /* Added this line */
 }
 
 #popup-title {
     color: #000000;
     font-size: 40px;
     margin-bottom: 20px;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+.popup-header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.popup-main-image {
+    flex: 0 0 50%;
+    margin-right: 20px;
+}
+
+.popup-main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.popup-info {
+    flex: 1;
+}
+
+#popup-text {
+    margin-bottom: 30px;
 }
 
 #popup-text section {
@@ -262,20 +280,20 @@ body, html {
     padding-left: 20px;
 }
 
-#popup-images.waterfall-gallery {
-    column-count: 1;
-    column-gap: 20px;
+#popup-images {
+    display: flex;
+    flex-direction: column;
+    clear: both;
 }
 
-#popup-images .waterfall-item {
-    break-inside: avoid;
+#popup-images .popup-image-container {
+    width: 100%;
     margin-bottom: 20px;
 }
 
-#popup-images img {
+#popup-images .popup-image-container img {
     width: 100%;
     height: auto;
-    display: block;
 }
 
 @media (max-width: 600px) {
@@ -284,7 +302,8 @@ body, html {
     }
     
     #popup-title {
-        font-size: 20px;
+        font-size: 24px;
+        margin-bottom: 10px;
     }
     
     #popup-text h3 {
@@ -297,3 +316,23 @@ body, html {
     text-decoration: none;
     color: inherit;
 }
+
+.popup-header {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.popup-main-image {
+    flex: 0 0 50%;
+    margin-right: 20px;
+}
+
+.popup-main-image img {
+    width: 100%;
+    height: auto;
+}
+
+.popup-info {
+    flex: 1;
+}
+
