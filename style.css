@@ -15,7 +15,6 @@ body, html {
     position: fixed;
     left: 0;
     top: 0;
-    overflow-y: auto;
     background: #000000;
     color: #fff;
     padding: 20px 15px;
@@ -90,7 +89,7 @@ body, html {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 10px;
+    /*margin: 10px;*/
     border-radius: 0px;
 }
 
@@ -99,7 +98,7 @@ body, html {
     width: calc(100% - 250px);
     padding: 20px;
     box-sizing: border-box;
-    background-color: #7e7bb0;
+    background-color: #0F0E0E;
     background-attachment: fixed;
     min-height: 100vh;
     overflow-y: auto;
@@ -280,41 +279,20 @@ body, html {
     padding-left: 20px;
 }
 
-#popup-slideshow {
-    position: relative;
-    max-width: 100%;
-    margin: 20px auto;
+#popup-images {
+    display: flex;
+    flex-direction: column;
+    clear: both;
 }
 
-#slideshow-container {
+#popup-images .popup-image-container {
     width: 100%;
-    height: 400px; /* Adjust as needed */
-    overflow: hidden;
+    margin-bottom: 20px;
 }
 
-.slide {
+#popup-images .popup-image-container img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-#prev-slide, #next-slide {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-#prev-slide {
-    left: 10px;
-}
-
-#next-slide {
-    right: 10px;
+    height: auto;
 }
 
 @media (max-width: 600px) {
@@ -356,3 +334,4 @@ body, html {
 .popup-info {
     flex: 1;
 }
+
