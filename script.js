@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["Adobe XD", "HTML", "CSS", "JavaScript"],
             role: "UI/UX Designer",
             keywords: ["Responsive Design", "Healthcare", "Web Development"],
-            images: ["path/to/uhn-image1.jpg", "path/to/uhn-image2.jpg"]
+            images: ["uhn/uhn_dets1.png", "uhn/uhn_dets2.png", "uhn/uhn_dets3.png", "uhn/uhn_dets4.gif", "uhn/uhn_dets5.gif","uhn/uhn_dets6.gif"]
         },
         "wv-project": {
             title: "Wonder Vision",
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["iOS ARKit", "Figma"],
             role: "Researcher UI/UX Designer Developer",
             keywords: ["AR & Voice Interface Design", "Accessibility Design"],
-            images: ["wonder vision/wv_dets1.png", "wonder vision/wv_dets2.png", "wonder vision/wv_dets3.png", "wonder vision/wv_dets4.png", "wonder vision/wv_dets5.png","wonder vision/wv_dets6.png", "wonder vision/wv_dets7.png"]
+            images: ["wonder vision/wv_dets1.png", "wonder vision/wv_dets2.png", "wonder vision/wv_dets3.png", "wonder vision/wv_dets4.png", "wonder vision/wv_dets5.png","wonder vision/wv_dets6.png", "wonder vision/wv_dets7.webp"]
         },
         "lotes": {
             title: "LOTES",
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["Cargo", "Adobe Aero ","Photoshop"],
             role: "Designer",
             keywords: ["Interaction Design", "Wearable Design"],
-            images: ["ewuw/ewuw_dets1.png", "ewuw/ewuw_dets2.png", "ewuw/ewuw_dets3.png", "ewuw/ewuw_dets4.png"]
+            images: ["ewuw/ewuw_dets1.png", "ewuw/ewuw_dets2.png", "ewuw/ewuw_dets3.png", "ewuw/ewuw_dets4.png","ewuw/ewuw_dets5.webp"]
         },
 
         "eepo": {
@@ -122,16 +122,16 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["Unity", "Figma","P5.js"],
             role: "Designer & Developer & Researcher",
             keywords: ["XR Interaction Design","Child-centered Design","Voice Interaction Design"],
-            images: ["path/to/table-tennis-image1.jpg", "path/to/table-tennis-image2.jpg"]
+            images: ["eepo/eepo_dets1.png", "eepo/eepo_dets2.png", "eepo/eepo_dets3.png", "eepo/eepo_dets4.png", "eepo/eepo_dets5.png","eepo/eepo_dets6.png","eepo/eepo_dets7.png"]
         },
     /// maker project 
         "green-splash": {
         title: "Green Splash",
-        abstract: "",
-        toolkit: ["",""],
+        abstract: "In this collaborative project, each of the four players nurtures their own plant, watching it grow from a seed on their individual screen. Simultaneously, a shared screen displays the status of each player's plant, reflecting any changes made in real-time. Each player designs their own unique plant, and these plants are showcased together on the shared screen interface. The entire interface, integrating all these features, was developed using P5.js.",
+        toolkit: ["P5.js", "Figma", "Mobile", "Tablet"],
         role: "Designer & Developer",
         keywords: ["Phone Controller","Remote Interaction"],
-        images: ["green splash/gs_dets1.png", "green splash/gs_dets2.png", "green splash/gs_dets3.png"]
+        images: ["green splash/gs_dets1.png", "green splash/gs_dets2.png", "green splash/gs_dets3.png","green splash/gs_dets4.webp","green splash/gs_dets5.webp"]
         },
 
         "light-measurement": {
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toolkit: ["Arduino","Glass Cup"],
             role: "Designer & Developer",
             keywords: ["Interactive Installation","Led Matrix"],
-            images: ["light measurement/lm_dets1.png", "light measurement/lm_dets2.png", "light measurement/lm_dets3.gif","light measurement/lm_dets4.gif"]
+            images: ["light measurement/lm_dets1.png", "light measurement/lm_dets2.png", "light measurement/lm_dets3.gif","light measurement/lm_dets4.gif",""]
             },
 
         "body-gesture": {
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Early Autumn",
             intro: "To many, Hong Kong epitomizes a modern metropolis, known for its dazzling neon lights, bustling streets, and perpetual motion. Yet, to me, Hong Kong reveals a more authentic, ecological side that showcases the vivid colors and textures of changing seasons",
             keywords: ["Landscape","Digital Photography"],
-            images: ["early autumn/1.jpg", "early autumn/2.jpg", "early autumn/3.jpg", "early autumn/4.jpg", "early autumn/5.jpg"]
+            images: ["early autumn/ea_dets1.jpg", "early autumn/ea_dets2.jpg", "early autumn/ea_dets3.jpg", "early autumn/ea_dets4.jpg", "early autumn/ea_dets5.jpg","early autumn/ea_dets6.jpg","early autumn/ea_dets7.jpg","early autumn/ea_dets8.jpg","ealy autumn/ea_dets9", "early autumn/ea_dets10.jpg","ealy autumn/ea_dets11", "early autumn/ea_dets12.jpg"]
         },
 
 

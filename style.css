@@ -93,6 +93,12 @@ body, html {
     border-radius: 0px;
 }
 
+.landingpage-img {
+    width: 70%;
+    margin-left: 30px;
+    height: auto;
+}
+
 .main-content {
     margin-left: 250px;
     width: calc(100% - 250px);
@@ -334,4 +340,3 @@ body, html {
 .popup-info {
     flex: 1;
 }
-
