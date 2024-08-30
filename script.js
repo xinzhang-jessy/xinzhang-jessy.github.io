@@ -203,39 +203,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // ... Add data for other projects ...
     };
 
-    // Check if we're on the photography page
-    const isPhotographyPage = document.querySelector('.photography-item') !== null;
-
-    if (isPhotographyPage) {
-        // Apply the photography-specific event listeners
-        const photographyItems = document.querySelectorAll('.photography-item');
-        photographyItems.forEach(item => {
-            item.addEventListener('click', (e) => {
-                e.preventDefault();
-                const projectId = item.dataset.project;
-                const project = projectData[projectId];
-                
-                if (project) {
-                    populatePhotographyPopup(project);
-                    popupOverlay.classList.remove('hidden');
-                    
-                    // Reset scroll position of popup content
-                    document.getElementById('popup-content').scrollTop = 0;
-                }
-            });
-        });
-    }
-
-    // Regular project click handler (will apply to all pages)
-    const regularItems = document.querySelectorAll('.waterfall-item:not(.photography-item)');
-    regularItems.forEach(item => {
+    // Apply to all waterfall items, including photography items
+    const allItems = document.querySelectorAll('.waterfall-item');
+    allItems.forEach(item => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
             const projectId = item.dataset.project;
             const project = projectData[projectId];
             
             if (project) {
-                populateRegularPopup(project);
+                if (item.classList.contains('photography-item')) {
+                    populatePhotographyPopup(project);
+                } else {
+                    populateRegularPopup(project);
+                }
                 popupOverlay.classList.remove('hidden');
                 
                 // Reset scroll position of popup content
@@ -283,45 +264,69 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h3>Keywords:</h3>
                 <ul id="popup-keywords">${project.keywords.map(keyword => `<li>${keyword}</li>`).join('')}</ul>
             </div>
-            <div id="popup-slideshow">
-                <div id="slideshow-container">
-                    <!-- Slides will be dynamically added here -->
-                </div>
-                <button id="prev-slide" aria-label="Previous slide">&#10094;</button>
-                <button id="next-slide" aria-label="Next slide">&#10095;</button>
+            <div id="popup-waterfall" class="waterfall-container">
+                ${project.images.map(image => `
+                    <div class="waterfall-item">
+                        <img src="${image}" alt="${project.title}" loading="lazy">
+                    </div>
+                `).join('')}
             </div>
         `;
 
-        // Set up slideshow
-        let currentSlide = 0;
-        let slides = project.images || [];
+        // Wait for images to load before initializing the waterfall layout
+        const images = popupContent.querySelectorAll('img');
+        let loadedImages = 0;
 
-        function showSlides() {
-            const slideshowContainer = document.getElementById('slideshow-container');
-            slideshowContainer.innerHTML = '';
-            slides.forEach((slide, index) => {
-                const img = document.createElement('img');
-                img.src = slide;
-                img.classList.add('slide');
-                img.style.display = index === currentSlide ? 'block' : 'none';
-                slideshowContainer.appendChild(img);
-            });
-        }
-
-        function changeSlide(n) {
-            currentSlide += n;
-            if (currentSlide >= slides.length) {
-                currentSlide = 0;
-            } else if (currentSlide < 0) {
-                currentSlide = slides.length - 1;
+        images.forEach(img => {
+            if (img.complete) {
+                loadedImages++;
+            } else {
+                img.addEventListener('load', () => {
+                    loadedImages++;
+                    if (loadedImages === images.length) {
+                        initializeWaterfall();
+                    }
+                });
             }
-            showSlides();
+        });
+
+        // If all images are already loaded, initialize immediately
+        if (loadedImages === images.length) {
+            initializeWaterfall();
+        }
+    }
+
+    function initializeWaterfall() {
+        const container = document.getElementById('popup-waterfall');
+        const items = container.querySelectorAll('.waterfall-item');
+
+        // Reset any previous styles
+        items.forEach(item => {
+            item.style.position = '';
+            item.style.left = '';
+            item.style.top = '';
+        });
+
+        // Set initial positions
+        let columns = [];
+        const columnWidth = items[0].offsetWidth;
+        const containerWidth = container.offsetWidth;
+        const columnCount = Math.floor(containerWidth / columnWidth);
+
+        for (let i = 0; i < columnCount; i++) {
+            columns.push(0);
         }
 
-        document.getElementById('prev-slide').addEventListener('click', () => changeSlide(-1));
-        document.getElementById('next-slide').addEventListener('click', () => changeSlide(1));
+        items.forEach(item => {
+            const shortestColumn = columns.indexOf(Math.min(...columns));
+            item.style.position = 'absolute';
+            item.style.left = `${shortestColumn * columnWidth}px`;
+            item.style.top = `${columns[shortestColumn]}px`;
+            columns[shortestColumn] += item.offsetHeight;
+        });
 
-        showSlides();
+        // Set container height
+        container.style.height = `${Math.max(...columns)}px`;
     }
 
     closePopup.addEventListener('click', () => {
@@ -345,6 +350,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             popupOverlay.classList.add('hidden');
+        }
+    });
+
+    // Add a resize event listener to re-initialize the waterfall layout on window resize
+    window.addEventListener('resize', () => {
+        if (!popupOverlay.classList.contains('hidden')) {
+            initializeWaterfall();
         }
     });
 });
