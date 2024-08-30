@@ -38,7 +38,7 @@ body, html {
 
 .menu-item {
     margin-bottom: 10px;
-}
+} 
 
 .menu-item > a {
     color: white;
@@ -61,7 +61,11 @@ body, html {
     margin-left: 10px;
 }
 
-.menu-item:hover .submenu {
+.submenu .active{
+    color: #18f3b3; 
+}
+
+.menu-item.active .submenu, .menu-item:hover .submenu {
     display: block;
 }
 
@@ -238,23 +242,39 @@ body, html {
     margin-top: 5vh; /* Added this line */
 }
 
+
 #popup-title {
     color: #000000;
     font-size: 40px;
     margin-bottom: 20px;
     font-weight: bold;
-    margin-left: 40px;
+    margin:20px;
+    margin-left:0;
 }
 
 .popup-header {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
+    padding-left: 40px;;
+    padding-right: 40px;;
 }
+
+.popup-header.photography{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.popup-header.photography img{
+    border-radius: 4px;
+}
+
 
 .popup-main-image {
     flex: 0 0 50%;
     margin-right: 20px;
+    margin: 20px;
 }
 
 .popup-main-image img {
@@ -375,7 +395,7 @@ margin-bottom: 10px;
 
 body, h1, h2, h3, p, ul, li {
     font-family: 'IBM Plex Mono', monospace;
-    color: #ffffff;
+    /* color: #ffffff; */
     align-items: left;
     
 }
