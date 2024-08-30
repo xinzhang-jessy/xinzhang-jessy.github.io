@@ -242,12 +242,19 @@ body, html {
     margin-top: 5vh; /* Added this line */
 }
 
+#popup-abstract {
+    font-size: 12px;
+}
+
+#popup-text {
+    margin-bottom: 10px;
+}
 
 #popup-title {
     color: #000000;
-    font-size: 40px;
+    font-size: 20px;
     margin-bottom: 20px;
-    font-weight: bold;
+    font-weight: 600;
     margin:20px;
     margin-left:0;
 }
@@ -270,7 +277,6 @@ body, html {
     border-radius: 4px;
 }
 
-
 .popup-main-image {
     flex: 0 0 50%;
     margin-right: 20px;
@@ -292,12 +298,12 @@ body, html {
 }
 
 #popup-text section {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-size: 12px;
 }
 
 #popup-text h3 {
-    font-size: 16px;
+    font-size: 12px;
     margin-bottom: 5px;
     font-weight: 600;
 }
@@ -309,17 +315,19 @@ body, html {
 #popup-images {
     display: flex;
     flex-direction: column;
-    clear: both;
+    align-items: center;
 }
 
 #popup-images .popup-image-container {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #popup-images .popup-image-container img {
     width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 @media (max-width: 600px) {
@@ -477,3 +485,66 @@ body, h1, h2, h3, p, ul, li {
     margin-bottom: 5px; /* Adjust as needed */
 }
 
+#popup-toolkit {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    font-size: 12px;
+}
+
+#popup-toolkit li {
+    display: inline;
+}
+
+#popup-toolkit li:not(:last-child)::after {
+    content: ", ";
+}
+
+#popup-keywords {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+    font-size: 12px;
+    margin-top: -2px;
+}
+
+#popup-keywords li {
+    display: inline;
+}
+
+#popup-keywords li:not(:last-child)::after {
+    content: ", ";
+}
+
+#popup-content h3 {
+    font-size: 14px;
+    margin-bottom: -2px; /* Adjust this value as needed */
+}
+
+#popup-role {
+    font-size: 12px;
+    margin-top: -2px;
+}
+
+#popup-intro {
+    font-size: 14px; /* Adjust this value as needed */
+    margin-top: 4px;
+}
+
+/* Change font size for intro text in photography popups */
+.popup-header.photography #popup-intro {
+    font-size: 14px; /* Adjust this value as needed */
+    margin-top: -10px; /* Reduces space above the intro */
+    margin-bottom: 15px;
+    width: 90%;
+}
+
+/* Change font size for keywords in photography popups */
+.popup-header.photography #popup-keywords,
+.popup-header.photography #popup-keywords li {
+    font-size: 14px; /* Adjust this value as needed */
+    margin-top: 4px; /* Reduces space above the intro */
+   
+}

@@ -17,14 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
     "seagull-studio": {
       title: "Seagull Studio",
       abstract:
-        "Seagull Studio is an online printing studio, producing photos into a varity of forms. The Logo is based on seagull's silhouette and associated with camera viewfinder to remind people of beautiful memories. As a designer at Seagull studio, my responsibilities encompass a range of tasks. I am actively involved in brainstorming branding strategies and crafting designs that are both user-friendly and visually attractive. My role also includes significant participation in UX (User Experience) related activities. This involves engaging with our initial users to gain insights into their preferences and requirements. Additionally, I collaborate closely with the product manager to continually refine and enhance the product.",
+      "Seagull Studio is an online printing studio, producing photos into a varity of forms. The Logo is based on seagull's silhouette and associated with camera viewfinder to remind people of beautiful memories. As a designer at Seagull studio, my responsibilities encompass a range of tasks. I am actively involved in brainstorming branding strategies and crafting designs that are both user-friendly and visually attractive. My role also includes significant participation in UX (User Experience) related activities. This involves engaging with our initial users to gain insights into their preferences and requirements. Additionally, I collaborate closely with the product manager to continually refine and enhance the product.",
       toolkit: ["Sketch", "Photoshop", "Adobe Illustrator", "Lightroom"],
       role: "Lead Designer UI/UX Designer Photographer",
-      keywords: [
-        "Mobile Application Deisng",
-        "Branding",
-        "Product Photography",
-      ],
+      keywords: ["Mobile Application Design","Branding","Product Photography"],
       images: [
         "seagull studio/ss_dets1.png",
         "seagull studio/ss_dets2.png",
@@ -315,9 +311,8 @@ document.addEventListener("DOMContentLoaded", () => {
     //photo
 
     "oasis-in-hongkong": {
-      title: "Oasis in Hong Kong",
-      intro:
-        "To many, Hong Kong epitomizes a modern metropolis, known for its dazzling neon lights, bustling streets, and perpetual motion. Yet, to me, Hong Kong reveals a more authentic, ecological side that showcases the vivid colors and textures of changing seasons",
+      title:"Oasis in Hong Kong",
+      intro:"To many, Hong Kong epitomizes a modern metropolis, known for its dazzling neon lights, bustling streets, and perpetual motion. Yet, to me, Hong Kong reveals a more authentic, ecological side that showcases the vivid colors and textures of changing seasons",
       keywords: ["Landscape", "Digital Photography"],
       images: [
         "oasis in hongkong/oihk_dets1.jpg",
@@ -333,7 +328,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     "cherry-blossom": {
       title: "Cherry Blossom",
-      intro: "",
+      intro: "This series of film photos captures the essence of springtime in Osaka, a time when cherry blossoms blanket the city in soft, delicate hues. These images offer a glimpse into the ephemeral beauty that unfolds across parks, riversides, and bustling streets, where petals float gently in the air and carpet the ground with a blush of pink.",
       keywords: ["Landscape", "Film Photography"],
       images: [
         "cherry blossom/cb_dets1.jpg",
@@ -346,8 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     "early-autumn": {
       title: "Early Autumn",
-      intro:
-        "To many, Hong Kong epitomizes a modern metropolis, known for its dazzling neon lights, bustling streets, and perpetual motion. Yet, to me, Hong Kong reveals a more authentic, ecological side that showcases the vivid colors and textures of changing seasons",
+      intro:"These photos capture the early autumn season in the Algonquin Park, where the landscape is transformed into a vivid tapestry of colors. As the seasons shift, a breathtaking array of hues emerge, painting the park in multiple layers of reds, oranges, yellows, and lingering greens.",
       keywords: ["Landscape", "Digital Photography"],
       images: [
         "early autumn/ea_dets1.jpg",
@@ -367,8 +361,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     "landscape-of-iceland": {
       title: "Landscape of Iceland",
-      intro:
-        "This photo series captures the striking contrast between the intense cold and the powerful light of an Icelandic winter. Despite landscapes blanketed in snow, there's an undeniable strength in the light that shines during sunset, infusing the scenes with a dynamic energy.",
+      intro:"This photo series captures the striking contrast between the intense cold and the powerful light of an Icelandic winter. Despite landscapes blanketed in snow, there's an undeniable strength in the light that shines during sunset, infusing the scenes with a dynamic energy.",
       keywords: ["Landscape", "Digital Photography"],
       images: [
         "landscape of iceland/loi_dets1.jpg",
@@ -384,8 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     "radiant-darkness": {
       title: "Radiant Darkness",
-      intro:
-        "This photo series captures the striking contrast between the intense cold and the powerful light of an Icelandic winter. Despite landscapes blanketed in snow, there's an undeniable strength in the light that shines during sunset, infusing the scenes with a dynamic energy.",
+      intro:"This photo series captures the striking contrast between the intense cold and the powerful light of an Icelandic winter. Despite landscapes blanketed in snow, there's an undeniable strength in the light that shines during sunset, infusing the scenes with a dynamic energy.",
       keywords: ["Urbanization", "Digital Photography"],
       images: [
         "radiant darkness/rd_dets1.jpg",
@@ -397,8 +389,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "radiant darkness/rd_dets7.jpg",
       ],
     },
-
-    // ... Add data for other projects ...
   };
 
   // Apply to all waterfall items, including photography items
