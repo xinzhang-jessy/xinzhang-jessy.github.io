@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "Seagull Studio is an online printing studio, producing photos into a varity of forms. The Logo is based on seagull's silhouette and associated with camera viewfinder to remind people of beautiful memories. As a designer at Seagull studio, my responsibilities encompass a range of tasks. I am actively involved in brainstorming branding strategies and crafting designs that are both user-friendly and visually attractive. My role also includes significant participation in UX (User Experience) related activities. This involves engaging with our initial users to gain insights into their preferences and requirements. Additionally, I collaborate closely with the product manager to continually refine and enhance the product.",
       toolkit: ["Sketch", "Photoshop", "Adobe Illustrator", "Lightroom"],
       role: "Lead Designer UI/UX Designer Photographer",
-      keywords: ["Mobile Application Design","Branding","Product Photography"],
+      keywords: ["Mobile Application Design","Visual Design","Product Photography"],
       images: [
         "seagull studio/ss_dets1.png",
         "seagull studio/ss_dets2.png",
@@ -137,8 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
       role: "UI Designer",
       keywords: ["System Information Design", "Web Mobile System Interaction"],
       images: [
-        "path/to/table-tennis-image1.jpg",
-        "path/to/table-tennis-image2.jpg",
+        "images/table-tennis-image1.jpg",
+        "images/table-tennis-image2.jpg",
       ],
     },
 
@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     "oasis-in-hongkong": {
       title:"Oasis in Hong Kong",
-      intro:"To many, Hong Kong epitomizes a modern metropolis, known for its dazzling neon lights, bustling streets, and perpetual motion. Yet, to me, Hong Kong reveals a more authentic, ecological side that showcases the vivid colors and textures of changing seasons",
+      intro:"To many, Hong Kong epitomizes a modern metropolis, known for its dazzling neon lights, bustling streets, and perpetual motion. Yet, to me, Hong Kong reveals a more authentic, ecological side that showcases the vivid colors and textures of changing seasons.",
       keywords: ["Landscape", "Digital Photography"],
       images: [
         "oasis in hongkong/oihk_dets1.jpg",
@@ -448,7 +448,17 @@ document.addEventListener("DOMContentLoaded", () => {
                   )
                   .join("")}
             </div>
+            <button id="close-popup-top" class="close-button">
+              <span class="inner">
+                <span class="label">Close</span>
+              </span>
+            </button>
         `;
+
+    const closeButton = document.getElementById('close-popup-top');
+    closeButton.addEventListener('click', function() {
+        document.getElementById('popup-overlay').classList.add('hidden');
+    });
   }
 
   // Function to populate the popup for photography projects
@@ -474,6 +484,11 @@ document.addEventListener("DOMContentLoaded", () => {
                   )
                   .join("")}
             </div>
+            <button id="close-popup-top" class="close-button">
+              <span class="inner">
+                <span class="label">Close</span>
+              </span>
+            </button>
         `;
 
     // Wait for images to load before initializing the waterfall layout
@@ -497,40 +512,28 @@ document.addEventListener("DOMContentLoaded", () => {
     if (loadedImages === images.length) {
       initializeWaterfall();
     }
+
+    const closeButton = document.getElementById('close-popup-top');
+    closeButton.addEventListener('click', function() {
+        document.getElementById('popup-overlay').classList.add('hidden');
+    });
   }
 
   function initializeWaterfall() {
-    const container = document.getElementById("popup-waterfall");
-    const items = container.querySelectorAll(".waterfall-item");
-
-    // Reset any previous styles
-    items.forEach((item) => {
-      item.style.position = "";
-      item.style.left = "";
-      item.style.top = "";
-    });
-
-    // Set initial positions
-    let columns = [];
-    const columnWidth = items[0].offsetWidth;
-    const containerWidth = container.offsetWidth;
-    const columnCount = Math.floor(containerWidth / columnWidth);
-
-    for (let i = 0; i < columnCount; i++) {
-      columns.push(0);
+    const gallery = document.querySelector('.waterfall-gallery');
+    if (gallery) {
+        const items = gallery.querySelectorAll('.waterfall-item');
+        // ... rest of the function
+    } else {
+        console.warn('Waterfall gallery element not found');
     }
-
-    items.forEach((item) => {
-      const shortestColumn = columns.indexOf(Math.min(...columns));
-      item.style.position = "absolute";
-      item.style.left = `${shortestColumn * columnWidth}px`;
-      item.style.top = `${columns[shortestColumn]}px`;
-      columns[shortestColumn] += item.offsetHeight;
-    });
-
-    // Set container height
-    container.style.height = `${Math.max(...columns)}px`;
   }
+
+  // Ensure the DOM is fully loaded before running the script
+  document.addEventListener('DOMContentLoaded', () => {
+    initializeWaterfall();
+    // ... other initialization code
+  });
 
   closePopup.addEventListener("click", () => {
     console.log("Close button clicked");
@@ -561,5 +564,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!popupOverlay.classList.contains("hidden")) {
       initializeWaterfall();
     }
+  });
+
+  const closePopupBottom = document.getElementById('close-popup-top');
+  
+  closePopupBottom.addEventListener('click', function() {
+      document.getElementById('popup-overlay').classList.add('hidden');
   });
 });
