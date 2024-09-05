@@ -36,12 +36,12 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     "uhn-project": {
-      title: "UHN Project",
+      title: "SGDc Inclusive Cancer Care On-line Learning Platform",
       abstract:
-        "A responsive web design project for UHN, focusing on visual design and user experience.",
+        "In this project, I collaborated with another designer to create the user interface for the LGBT Cancer Care E-learning website. This project is specifically designed for healthcare providers and caregivers, aiming to enhance their communication skills with LGBT cancer patients through interactive scenarios and avatar-driven conversations. As a UI/UX and visual designer, my responsibilities included initial brainstorming sessions, where we conceptualized the core user experience and visual direction. I played a key role in developing the information architecture and designing intuitive user flows that align with the learning objectives. My work also involved overall visual planning, ensuring consistency and accessibility across all touch points. In the later stages, I focused on high-fidelity scene design, bringing the user interface to life with detailed, user-centered visuals that resonate with the diverse needs of our audience.",
       toolkit: ["Adobe XD", "HTML", "CSS", "JavaScript"],
       role: "UI/UX Designer",
-      keywords: ["Responsive Design", "Healthcare", "Web Development"],
+      keywords: ["Responsive Web Design", "Visual Design","User Experience Design","Inclusive Design"],
       images: [
         "uhn/uhn_dets1.png",
         "uhn/uhn_dets2.png",
